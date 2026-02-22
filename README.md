@@ -28,3 +28,109 @@ Philippine School Attendance System with RFID, Multi-level Support, and Parent N
 - ✅ **Backup & Recovery** - Automated with encryption
 
 ## 🏗️ Architecture
+┌─────────────────┐ ┌─────────────────┐ ┌─────────────────┐
+│ ENROLLMENT │ │ GATE │ │ PARENT APP │
+│ PC1 │────▶│ PC2, PC3 │────▶│ (Android) │
+│ (Blazor Web) │ │ (Blazor Hybrid) │ │ (Future) │
+└─────────────────┘ └─────────────────┘ └─────────────────┘
+│ │ │
+▼ ▼ ▼
+┌─────────────────────────────────────────────────────────┐
+│ SQLite DATABASES │
+│ (Offline-First with Auto-Sync) │
+└─────────────────────────────────────────────────────────┘
+
+
+## 🚀 Quick Start
+
+### Prerequisites
+- .NET 8 SDK
+- Visual Studio 2022 / VS Code
+- SQLite
+- RFID Reader (ACS ACR125U recommended)
+
+### Installation
+
+```bash
+# Clone repository
+git clone https://github.com/yourusername/EduTrackPH.git
+cd EduTrackPH
+
+# Restore dependencies
+dotnet restore
+
+# Build solution
+dotnet build
+
+# Run Enrollment Web App
+cd src/EduTrackPH.Web
+dotnet run
+
+# Run Gate App (on gate PCs)
+cd src/EduTrackPH.Gate
+dotnet run
+
+📚 Documentation
+Complete Blueprint
+
+Installation Guide
+
+User Manual
+
+Admin Guide
+
+API Documentation
+
+🛠️ Technology Stack
+Component	Technology
+Backend	.NET 8, C#
+Frontend (PC1)	Blazor Server
+Gate App	Blazor Hybrid (.NET MAUI)
+Mobile App	.NET MAUI Blazor
+Database	SQLite
+Notifications	Firebase Cloud Messaging
+RFID	ACS ACR125U API
+📊 System Requirements
+Enrollment PC (PC1)
+Windows 10/11
+
+8GB RAM minimum
+
+250GB SSD
+
+RFID Reader
+
+Gate PC (PC2, PC3)
+Windows 10/11
+
+4GB RAM
+
+120GB SSD
+
+RFID Reader
+
+Monitor for display
+
+🤝 Contributing
+Fork the repository
+
+Create your feature branch (git checkout -b feature/AmazingFeature)
+
+Commit changes (git commit -m 'Add AmazingFeature')
+
+Push to branch (git push origin feature/AmazingFeature)
+
+Open a Pull Request
+
+📄 License
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+📞 Contact
+Project Link: https://github.com/yourusername/EduTrackPH
+
+🙏 Acknowledgments
+Department of Education (DepEd) Philippines
+
+Commission on Higher Education (CHED)
+
+All Filipino teachers and administrators
